@@ -1,4 +1,0 @@
-0
-1
-String is too long
-Invalid input
