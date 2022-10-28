@@ -7,7 +7,9 @@ This code is written to solve this problem
 Unit tests are written for the three cases to be tested
 
 Error messages added to output file instead of -1
+
 Invalid string - if the string contains anything other that 1s and 0s
+
 String too long -  if the string length is more than 20 chars
 
 please look at develop and staging branch, only two main commits to master 
