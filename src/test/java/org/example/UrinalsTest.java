@@ -7,6 +7,10 @@ class UrinalsTest {
 
     @Test
     void numberOfPeopleInUrinal() {
+        String expectedOutput = "2";
+        String inputString = "1000100";
+        assertEquals(expectedOutput, Urinals.countUrinals(inputString));
+        System.out.println("====== Poornima Sathya Keerthi == TEST ONE EXECUTED =======");
     }
 
     @Test
