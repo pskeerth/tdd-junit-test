@@ -7,26 +7,26 @@ class UrinalsTest {
 
     @Test
     void numberOfPeopleInUrinal() {
-        System.out.println("Not yet implemented");
-        String expectedOutput = "1";
-        String inputString = "10001";
+        String expectedOutput = "2";
+        String inputString = "1000100";
         assertEquals(expectedOutput, Urinals.countUrinals(inputString));
+        System.out.println("====== Poornima Sathya Keerthi == TEST ONE EXECUTED =======");
     }
 
     @Test
     void stringTooLong() {
-        System.out.println("Not yet implemented");
-        String stringTooLongErrorMsg = "String is too long";
+        String stringTooLongErrorMsg = "-1";
         String inputString = "100000000000000001100";
         assertEquals(stringTooLongErrorMsg, Urinals.countUrinals(inputString));
+        System.out.println("====== Poornima Sathya Keerthi == TEST TWO EXECUTED =======");
     }
 
     @Test
     void invalidString() {
-        System.out.println("Not yet implemented");
-        String stringInvalidErrorMsg = "Invalid input";
+        String stringInvalidErrorMsg = "-1";
         String inputString = "abc";
         assertEquals(stringInvalidErrorMsg, Urinals.countUrinals(inputString));
+        System.out.println("====== Poornima Sathya Keerthi == TEST THREE EXECUTED =======");
     }
 
 }
