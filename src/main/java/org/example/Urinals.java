@@ -12,19 +12,26 @@ public class Urinals {
 
     static {
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter("src/main/resources/output.txt"));
+            int suffix = 1;
+            String fileName = "rule.txt";
+            File file = new File("src/main/resources/", fileName);
+            while (file.exists()) {
+                fileName = "rule" + (suffix++) + ".txt";
+                file = new File("src/main/resources/", fileName);
+            }
+            bufferedWriter = new BufferedWriter(new FileWriter(file));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static void main(String[] args) throws IOException {
+        public static void main(String[] args) throws IOException {
         readFromFile();
         bufferedWriter.close();
     }
     public static void readFromFile() throws IOException {
         String line;
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/resources/input.txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/resources/urinal.dat"));
         while ((line = bufferedReader.readLine()) != null) {
             writeToFile(countUrinals(line));
         }
@@ -41,11 +48,16 @@ public class Urinals {
         int i =0;
         int count = 0;
         if(string.length()>20)
-            return "String is too long";
+            return "-1";
         for(int j=0; j<string.length(); j+=1) {
             char c= urinal.charAt(j);
             if(c!='0' && c!='1')
-                return "Invalid input";
+                return "-1";
+            if((j+1)<string.length()){
+                if(c=='1' && urinal.charAt(j+1)=='1')
+                    return "-1";
+            }
+
         }
         while((i+3)<string.length()){
             if((urinal.charAt(i)=='1') && (urinal.charAt(i+1)=='0') && (urinal.charAt(i+2)=='0') && (urinal.charAt(i+3)=='0')) {
