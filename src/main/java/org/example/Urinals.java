@@ -26,7 +26,7 @@ public class Urinals {
         String line;
         BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/resources/input.txt"));
         while ((line = bufferedReader.readLine()) != null) {
-            writeToFile(numberOfPeopleInUrinal(line));
+            writeToFile(countUrinals(line));
         }
 
     }
@@ -36,7 +36,7 @@ public class Urinals {
         bufferedWriter.newLine();
     }
 
-    public static String numberOfPeopleInUrinal(String string) {
+    public static String countUrinals(String string) {
         StringBuilder urinal = new StringBuilder(string);
         int i =0;
         int count = 0;
