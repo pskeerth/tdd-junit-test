@@ -11,6 +11,10 @@ class UrinalsTest {
 
     @Test
     void stringTooLong() {
+        String stringTooLongErrorMsg = "-1";
+        String inputString = "100000000000000001100";
+        assertEquals(stringTooLongErrorMsg, Urinals.countUrinals(inputString));
+        System.out.println("====== Poornima Sathya Keerthi == TEST TWO EXECUTED =======");
     }
 
     @Test
