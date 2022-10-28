@@ -16,7 +16,9 @@ class UrinalsTest {
      */
     @Test
     void numberOfPeopleInUrinal() {
-        System.out.println("Not yet implemented");
+        String expectedOutput = "1";
+        String inputString = "10001";
+        assertEquals(expectedOutput, Urinals.numberOfPeopleInUrinal(inputString));
     }
 
     /**
@@ -25,11 +27,15 @@ class UrinalsTest {
      */
     @Test
     void stringTooLong() {
-        System.out.println("Not yet implemented");
+        String stringTooLongErrorMsg = "String is too long";
+        String inputString = "100000000000000001100";
+        assertEquals(stringTooLongErrorMsg, Urinals.numberOfPeopleInUrinal(inputString));
     }
 
     @Test
     void invalidString() {
-        System.out.println("Not yet implemented");
+        String stringInvalidErrorMsg = "Invalid input";
+        String inputString = "abc";
+        assertEquals(stringInvalidErrorMsg, Urinals.numberOfPeopleInUrinal(inputString));
     }
 }
