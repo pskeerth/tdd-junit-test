@@ -15,6 +15,10 @@ class UrinalsTest {
 
     @Test
     void invalidString() {
+        String stringInvalidErrorMsg = "-1";
+        String inputString = "abc";
+        assertEquals(stringInvalidErrorMsg, Urinals.countUrinals(inputString));
+        System.out.println("====== Poornima Sathya Keerthi == TEST THREE EXECUTED =======");
     }
 
 }
